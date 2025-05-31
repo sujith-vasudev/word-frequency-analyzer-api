@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends, Body
-from pydantic import parse_obj_as
 from starlette import status
 from starlette.responses import JSONResponse
 

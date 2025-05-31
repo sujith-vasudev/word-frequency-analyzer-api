@@ -37,7 +37,7 @@ analyzer = Table(
 )
 
 
-def start_mappers():
+def bind_models():
     mapper_registry.map_imperatively(User, users, properties={
         "analysis_result": relationship(UrlAnalyzer,
                                         cascade="all, delete-orphan",

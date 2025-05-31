@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 
 class UserAction:
 
-    def __init__(self, session):
+    def __init__(self, session: 'Session'):
         self.session = session
 
     def validate_username(self, username):

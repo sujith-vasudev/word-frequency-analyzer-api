@@ -5,7 +5,7 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from api.resources import auth_router, analyze_router
-from db.sqlalchemy import start_mappers
+from db.sqlalchemy import bind_models
 from exceptions import ValidationError, AccessExpired
 
 app = FastAPI(title="Demo")
@@ -13,7 +13,7 @@ app = FastAPI(title="Demo")
 
 @app.on_event("startup")
 def build_db_mappers():
-    start_mappers()
+    bind_models()
 
 
 origins = ["*"]
