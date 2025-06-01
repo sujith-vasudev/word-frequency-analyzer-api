@@ -16,7 +16,7 @@ def get_url_response(url):
     try:
         response = requests.get(url, timeout=5)
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Failed to fetch URL: {str(e)}")
+        raise HTTPException(status_code=400, detail=f"Failed to fetch data from url: {url}")
     return response.text
 
 

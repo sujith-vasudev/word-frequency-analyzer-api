@@ -19,6 +19,7 @@ class UserAction:
 
     def validate_user(self, username, password):
         user_obj = UserData.validate_username(session=self.session, username=username)
+        if user_obj is None: raise ValidationError(f"Invalid User '{username}'")
         if not user_obj.is_password_valid(password=password):
             raise ValidationError("Invalid credentials")
 

@@ -20,6 +20,7 @@ def login(payload: LoginModel, session=Depends(get_db_session)):
         "status": "success",
         "message": "user logged successfully",
         "result": {
+            "username": payload.username,
             "access_token": access_token,
             "refresh_token": refresh_token,
         }
