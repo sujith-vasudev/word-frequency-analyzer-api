@@ -32,6 +32,7 @@ CREATE DATABASE demo;
 ## Library Dependencies
 
 Ensure all required dependencies are installed before running the application.
+Python Version 3.12
 
 **Install via pip**:
 
